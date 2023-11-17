@@ -1,0 +1,30 @@
+{% extends '@MailThemes/modern/components/layout.html.twig' %}
+
+{% block content %}
+  <table width="100%">
+    <tr>
+      <td width="30"></td>
+      <td align="center" class="titleblock">
+        <font size="2" face="{{ languageDefaultFont }}Open-sans, sans-serif" color="#555454">
+          <span class="title">{{ 'Vous avez reçu un email depuis le formulaire de contact de votre shop.'|trans({}, 'EmailsBody', locale)|raw }}</span><br><br>
+        </font>
+      </td>
+      <td width="30"></td>
+    </tr>
+    <tr>
+      <td width="30"></td>
+      <td align="left">
+        <font size="2" face="{{ languageDefaultFont }}Open-sans, sans-serif" color="#555454">
+          <span>{{ 'Nom :'|trans({}, 'EmailsBody', locale)|raw }} {firstname} {lastname}</span><br>
+          <span>{{ 'Email :'|trans({}, 'EmailsBody', locale)|raw }} {email}</span><br><br>
+          <span>{{ 'Message :'|trans({}, 'EmailsBody', locale)|raw }}</span><br>
+          <span>{message}</span>
+        </font>
+      </td>
+      <td width="30"></td>
+    </tr>
+    <tr>
+      <td class="space_footer">&nbsp;</td>
+    </tr>
+  </table>
+{% endblock %}

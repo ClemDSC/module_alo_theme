@@ -1,0 +1,21 @@
+ 
+
+{shop_url}
+[femme](/fr/10-femme)	[homme](/fr/11-homme)	[enfant](/fr/12-enfant)	[boutique](/fr/contact-alo-1905)
+
+Votre commande # {order_name} est retardée
+
+Malheureusement nous avons un imprévu qui retarde la livraison de votre commande. On met tout en œuvre pour raccourcir au maximum le délai.
+
+Retrouvez le suivi dans votre [espace client]({my_account_url}).
+
+détail de la commande
+
+{products_txt}
+
+92 rue de Turenne 75003 Paris | Mardi-Samedi | 11h30-19h30
+
+[mon compte]({my_account_url})	[nous contacter](/fr/contact-alo-1905)	[alo.paris]({shop_url})
+https://www.instagram.com/alo.paris_official/
+
+ 

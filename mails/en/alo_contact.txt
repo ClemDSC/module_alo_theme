@@ -1,0 +1,10 @@
+[{shop_name}]({shop_url})
+Vous avez reçu un email depuis le formulaire de contact de votre shop.
+
+Nom : {firstname} {lastname}
+Email : {email}
+
+Message :
+{message}
+
+[{shop_name}]({shop_url}) powered by [PrestaShop™](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail&utm_campaign=footer_1-7)

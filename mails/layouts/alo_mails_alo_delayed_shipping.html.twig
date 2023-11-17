@@ -1,0 +1,94 @@
+{% extends '@MailThemes/alo_mails/components/order_layout.html.twig' %}
+
+{% block title %}{{ 'Delayed delivery'|trans({}, 'Emails.Body', locale) }}{% endblock %}
+
+{% block content %}
+    <table align="{{ align_left }}" style="display: block;padding: 0 16px">
+        <tbody align="{{ align_left }}">
+        <tr style="display: block;padding-bottom: 32px">
+            <td>
+                <img style="display: block;width: 608px;height: 322px;"
+                     src="{{ mailThemesUrl }}/alo_mails/assets/mail-delayed-shipping.jpg" alt="a l'ouvrier - archives">
+            </td>
+        </tr>
+        <tr style="display:block;padding-bottom: 16px;border-bottom: 1px solid #313648;">
+            <td>
+                <p style="font-family:Work Sans, Open sans, arial, sans-serif;font-weight: 900;font-size: 32px;line-height: 38px;color: #313648;text-transform: uppercase;">
+                    {{ 'Votre commande # {order_name} est retardée'|trans({}, 'EmailsBody', locale)|raw }}
+                </p>
+            </td>
+        </tr>
+        <tr style="display:block;padding-top: 24px;">
+            <td>
+                <div style="font-family:Work Sans, Open sans, arial, sans-serif;font-size:16px;font-weight:400;line-height:19px;color: #313648;">
+                    {{ 'Malheureusement nous avons un imprévu qui retarde la livraison de votre commande. On met tout en œuvre pour raccourcir au maximum le délai.'|trans({}, 'Emails.Body', locale)|raw }}
+                </div>
+            </td>
+        </tr>
+        <tr style="display:block;padding-bottom: 32px;">
+            <td>
+                <div style="font-family:Work Sans, Open sans, arial, sans-serif;font-size:16px;font-weight:400;line-height:19px;color: #313648;">
+                    {{ 'Retrouvez le suivi dans votre '|trans({}, 'Emails.Body', locale)|raw }}
+                    <a href="{my_account_url}"
+                       target="_blank"
+                       style="font-family:Work Sans, Open sans, arial, sans-serif;font-size:16px;font-weight:700;line-height:19px;color: #313648;">{{ 'espace client'|trans({}, 'Emails.Body', locale)|raw }}</a>.
+                </div>
+            </td>
+        </tr>
+
+        <tr style="display:block;">
+            <td>
+                <div style="font-family:Work Sans, Open sans, arial, sans-serif;font-weight: 900;font-size: 16px;line-height: 19px;color: #313648;text-transform: uppercase">
+                    détail de la commande
+                </div>
+            </td>
+        </tr>
+
+        <div style="margin:0px auto;max-width:640px;background: #F9F6F1">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                <tr>
+                    <td style="direction:{{ direction }};font-size:0px;padding:20px 0;text-align:center;">
+                        <!--[if mso | IE]>
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="" style="vertical-align:top;width:640px;"><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix"
+                             style="font-size:0px;text-align:{{ align_left }};direction:{{ direction }};display:inline-block;vertical-align:top;width:100%;">
+                            <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                   style="vertical-align:top;" width="100%">
+                                <tbody>
+                                <tr>
+                                    <td align="{{ align_left }}" class="products-table"
+                                        style="font-size:0px;padding: 0 16px;word-break:break-word;" bgcolor="#F9F6F1">
+                                        <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                               style="color:#000000;font-family:Open sans, arial, sans-serif;font-size:14px;line-height:22px;table-layout:auto;width:100%;border:none;">
+                                            <colgroup>
+                                                <col span="1" style="width: 25%;">
+                                                <col span="1" style="width: 50%;">
+                                                <col span="1" style="width: 25%;">
+                                            </colgroup>
+
+                                            {% if templateType == 'html' %}
+                                                {products}
+                                            {% endif %}
+                                            {% if templateType == 'txt' %}
+                                                {products_txt}
+                                            {% endif %}
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        </tbody>
+    </table>
+{% endblock %}

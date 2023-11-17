@@ -1,0 +1,16 @@
+ 
+
+{shop_url}
+[femme](/fr/10-femme)	[homme](/fr/11-homme)	[enfant](/fr/12-enfant)	[boutique](/fr/contact-alo-1905)
+Vous avez reçu un email depuis le formulaire de contact de votre shop.
+
+Nom : {firstname} {lastname}
+Email : {email}
+
+Message :
+{message}
+
+92 rue de Turenne 75003 Paris | Mardi-Samedi | 11h30-19h30
+
+[mon compte]({my_account_url})	[nous contacter](/fr/contact-alo-1905)	[alo.paris]({shop_url})
+https://www.instagram.com/alo.paris_official/
